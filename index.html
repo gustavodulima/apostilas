@@ -6,18 +6,20 @@
     <title>Desafio Detox 7 Dias - Página de Vendas</title>
     <link rel="stylesheet" href="CSS/Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Barra de promoção -->
     <div class="promo-bar">
         <p>🚨 PROMOÇÃO EXCLUSIVA! APOSTILA COMPLETA POR APENAS R$10,00! 🚨</p>
+        <div id="countdown"></div>
     </div>
 
     <!-- Cabeçalho -->
     <header>
         <h1>🔥 SEQUE A BARRIGA E ELIMINE TOXINAS EM APENAS 7 DIAS! 🔥</h1>
         <p>Descubra o método natural que está ajudando milhares de mulheres a perder peso, desinchar e recuperar a energia!</p>
-        <a href="https://pay.kiwify.com.br/QbvxzNE" class="cta-button">QUERO MINHA APOSTILA AGORA!</a>
+        <p class="subtitle">👉 <strong>Resultados comprovados</strong>: perca até 5kg em uma semana sem passar fome!</p>
     </header>
 
     <!-- Seção de vídeo -->
@@ -27,7 +29,8 @@
             <div class="video-wrapper">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/kkiJTOlRXRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
+        </div><br>
+        <a href="https://pay.kiwify.com.br/QbvxzNE" class="cta-button">QUERO MINHA APOSTILA AGORA!</a>
     </section>
 
     <!-- Seção de benefícios -->
@@ -62,10 +65,12 @@
         <div class="container">
             <h2>O QUE ESTÃO FALANDO SOBRE O DESAFIO DETOX 7 DIAS?</h2>
             <div class="testimonial-card">
+                <img src="https://via.placeholder.com/80" alt="Ana C." class="testimonial-img">
                 <p>"Perdi 4kg em uma semana e me sinto muito mais disposta! Recomendo demais!"</p>
                 <span>- Ana C.</span>
             </div>
             <div class="testimonial-card">
+                <img src="https://via.placeholder.com/80" alt="Maria S." class="testimonial-img">
                 <p>"Finalmente encontrei um método que funciona! Estou amando os resultados!"</p>
                 <span>- Maria S.</span>
             </div>
@@ -80,6 +85,25 @@
         </div>
     </section>
 
+    <!-- Seção de FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>PERGUNTAS FREQUENTES</h2>
+            <div class="faq-item">
+                <h3>Como vou receber a apostila?</h3>
+                <p>Após a confirmação do pagamento, você receberá um e-mail com o link para download da apostila em PDF.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso seguir à risca o cardápio?</h3>
+                <p>Recomendamos seguir o cardápio para obter os melhores resultados, mas você pode adaptar conforme sua rotina.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Posso fazer o detox mais de uma vez?</h3>
+                <p>Sim! O detox pode ser repetido sempre que você sentir necessidade de desintoxicar o corpo.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action final -->
     <section class="final-cta">
         <div class="container">
@@ -89,9 +113,38 @@
         </div>
     </section>
 
+    <!-- Botão flutuante -->
+    <a href="https://pay.kiwify.com.br/QbvxzNE" class="floating-button">QUERO MINHA APOSTILA!</a>
+
     <!-- Rodapé -->
     <footer>
         <p>© 2025 Desafio Detox 7 Dias. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Contador regressivo
+        const countdown = document.getElementById('countdown');
+        const targetDate = new Date();
+        targetDate.setHours(targetDate.getHours() + 24); // 24 horas a partir de agora
+
+        function updateCountdown() {
+            const now = new Date();
+            const difference = targetDate - now;
+
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `⏳ Promoção termina em: ${hours}h ${minutes}m ${seconds}s`;
+
+            if (difference <= 0) {
+                clearInterval(interval);
+                countdown.innerHTML = "Promoção encerrada!";
+            }
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
