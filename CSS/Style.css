@@ -1,0 +1,200 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Barra de promoção */
+.promo-bar {
+    background-color: #ff4757;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #2ed573;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botão CTA */
+.cta-button {
+    background-color: #ffa502;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff6348;
+}
+
+/* Seção de vídeo */
+.video-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de benefícios */
+.benefits {
+    padding: 50px 20px;
+    background-color: #f1f2f6;
+    text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.benefits ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.benefits ul li {
+    margin: 10px 0;
+}
+
+/* Seção de conteúdo do eBook */
+.ebook-content {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.ebook-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.ebook-content ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.ebook-content ul li {
+    margin: 10px 0;
+}
+
+/* Seção de depoimentos */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #f1f2f6;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2f3542;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: #2ed573;
+}
+
+/* Seção de garantia */
+.guarantee {
+    padding: 50px 20px;
+    background-color: #2ed573;
+    color: white;
+    text-align: center;
+}
+
+.guarantee h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.guarantee p {
+    font-size: 1.2rem;
+}
+
+/* Call to Action final */
+.final-cta {
+    padding: 50px 20px;
+    background-color: #ff4757;
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2f3542;
+    color: white;
+    font-size: 0.9rem;
+}
